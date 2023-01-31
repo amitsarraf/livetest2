@@ -2,7 +2,14 @@
 <script>
 async function callApi(){
  const accessToken = await fetch(
-        `https://www.linkedin.com/oauth/v2/accessToken?code=AQSiKWO_1Opa4phoX4dR-5zd-MrKdCBt_jF4ILkLst7PQcQ-olXQkm7gvhMv8qiPIlQcHdQsC_ANEsla95BecuZRTlH-MXJrRVlP05x6bM5ho1AkADacjI9sZG_oNaVbVYTWyJY-n0Qloom0LxMeHuQ7lbVFqEQfIikR16BZh0ZDLiiL3nKSN12YR4OckGo6qIznJTKU6_Igxaa5gEM&grant_type=authorization_code&client_id=86n27tk8ezpwoa&client_secret=DHYbOhcOKcs6PsZ0&redirect_uri=http://localhost:3000/linkedin`
+        `https://www.linkedin.com/oauth/v2/accessToken?code=AQSiKWO_1Opa4phoX4dR-5zd-MrKdCBt_jF4ILkLst7PQcQ-olXQkm7gvhMv8qiPIlQcHdQsC_ANEsla95BecuZRTlH-MXJrRVlP05x6bM5ho1AkADacjI9sZG_oNaVbVYTWyJY-n0Qloom0LxMeHuQ7lbVFqEQfIikR16BZh0ZDLiiL3nKSN12YR4OckGo6qIznJTKU6_Igxaa5gEM&grant_type=authorization_code&client_id=86n27tk8ezpwoa&client_secret=DHYbOhcOKcs6PsZ0&redirect_uri=http://localhost:3000/linkedin`,
+          {
+          method: 'POST',
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json',
+          },
+        }
  )
  console.log(accessToken)
 }
